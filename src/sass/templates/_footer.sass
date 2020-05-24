@@ -1,0 +1,80 @@
+.footer
+  position: relative
+  background: $dark url('../img/footer-bg.png') no-repeat center / cover
+  padding-top: 22rem
+  &-container
+    position: absolute
+    left: 50%
+    top: -22rem
+    transform: translateX(-50%)
+    max-width: 88.3rem
+    width: 100%
+    padding: 3.44rem 0
+    background: $dark url('../img/line-bg.svg') no-repeat center / cover
+    &__title
+      margin-bottom: 4.5rem
+      font-size: 2rem
+      +yeseva
+      text-align: center
+      text-transform: uppercase
+      color: $light
+    &__form
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      max-width: 52rem
+      margin: auto
+  &__group
+    max-width: 23.1rem
+    width: 100%
+    &:nth-last-child(3)
+      flex-basis: 100%
+      width: 100%
+      max-width: 100%
+    &:nth-child(4)
+      max-width: 100%
+      margin-top: -2.5px
+  &__policy
+    display: flex
+    align-self: center
+    color: $light
+  &__btn
+    max-width: 20rem
+    width: 100%
+    height: 5.1rem
+    margin: auto
+  &__contacts
+    display: flex
+    flex-direction: column
+  &__description
+    max-width: 58.9rem
+    margin: auto
+    margin-top: 5.2rem
+    margin-bottom: 2.5rem
+    font-size: 2rem
+    +yeseva
+    line-height: 2.8rem
+    text-transform: uppercase
+    text-align: center
+    color: $primary
+  &__social
+    margin-bottom: 4.4rem
+  &__item
+    margin-right: 15px
+    &:last-child
+      margin-right: 0
+  &__map
+    position: relative
+    max-width: 92.5rem
+    width: 100%
+    height: 46.5rem
+    margin: auto
+    margin-bottom: 8.5rem
+  &__menu
+    background-color: $dark
+  &__wrap
+    display: flex
+    align-items: center
+    min-height: 83px
+  &__logo
+    margin-right: 10.9rem

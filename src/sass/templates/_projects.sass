@@ -1,0 +1,84 @@
+.project
+  padding-top: 10rem
+  padding-bottom: 34.5rem
+  transform: translateY(-5rem)
+  color: $light
+  background: $dark url('../img/line-bg.svg') no-repeat center / cover
+  &__slide
+    max-width: 38.2rem
+  &__title
+    margin-bottom: 2rem
+    font-size: 2.7rem 
+    color: $primary
+    +yeseva 
+    line-height: 3.7rem
+    letter-spacing: -0.31rem
+    text-transform: uppercase
+  &__item
+    display: flex
+    align-items: center
+    letter-spacing: -0.1rem
+    &::after
+      content: ''
+      display: inline-block
+      width: 92px
+      height: 1px
+      margin-left: 3rem
+      background-color: $primary
+  &__text
+    margin-bottom: 5rem
+    max-width: 44.2rem
+    font-size: 1.8rem
+    line-height: 2.9rem
+  &__slider
+    &-photo
+      width: 100%
+      max-height: 48.2rem
+      img
+        display: block
+        width: 100%
+        max-width: 67.9rem
+        margin-left: auto
+        margin-right: 2rem
+        object-fit: cover
+.swiper
+  &-slide
+    display: flex
+    flex-wrap: wrap
+    padding-bottom: 7.2rem
+    &__text
+      flex-basis: 50%
+      margin-bottom: 3.6rem
+    &__heading
+      margin-bottom: 1.2rem
+      font-size: 1.8rem
+      +yeseva
+      text-transform: uppercase
+      color: $primary
+    &__desc
+      font-size: 1.5rem
+      line-height: 2rem
+  &-pagination
+    bottom: 0.9rem
+    &-bullet
+      width: 1rem
+      height: 1rem
+      background: rgba($light, 0.3)
+      &-active
+        background: $light
+  &-button
+    &-prev, &-next
+      top: auto
+      width: 4.2rem
+      height: 1.4rem
+      &::after
+        display: none
+    &-prev
+      left: 0
+      background: url('../img/prev-btn.svg') no-repeat center / contain
+    &-next
+      background: url('../img/next-btn.svg') no-repeat center / contain
+.swiper-container-horizontal>.swiper-pagination-bullets
+  width: auto
+  .swiper-pagination-bullet
+    margin: 0 7.5px
