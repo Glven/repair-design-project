@@ -115,6 +115,12 @@
       display: none
 
 @media (max-width: 992px)
+  .btn
+    &_primary
+      &:hover
+        color: $light
+        background: $primary
+        box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2)
   .types
     padding-bottom: 10rem
   .section
@@ -328,6 +334,7 @@
     margin-top: -2px
     padding-bottom: 4.5rem
     background-color: $dark
+    z-index: 2
     .row
       flex-direction: column
       align-items: flex-end
@@ -350,10 +357,10 @@
         height: 9.5rem
       &__text
         max-width: 34rem
-        margin-top: -14rem
+        margin-top: -19rem
         padding-top: 3.2rem
         padding-bottom: 3.2rem
-      &__btn
+      &__years
         height: 6.3rem
         font-size: 2rem !important
       &__title
@@ -372,6 +379,9 @@
     padding-top: 10rem
     background: $dark
     &-container
+      position: relative 
+      left: 0
+      transform: translateX(0)
       &__title
         font-size: 2.85rem
         margin-bottom: 7.5rem

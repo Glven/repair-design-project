@@ -19,10 +19,14 @@ body
     border: 1px solid $light
   &_primary
     background-color: $primary
-    border: 1px solid $primary
+    border: 1.5px solid $primary
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2)
+    transition: all 0.3s
+    &:hover
+      box-shadow: none
+      color: $primary
+      background: transparent
   &_big-size
     font-size: 15px
-
 
   
