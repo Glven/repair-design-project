@@ -883,6 +883,47 @@ input.invalid {
     border: none;
     cursor: pointer; }
 
+.thanks {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 500;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); }
+  .thanks-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 50.9rem;
+    padding: 6rem 4rem;
+    background: #131313 url("../img/line-bg.svg") no-repeat center/cover; }
+    .thanks-container__close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer; }
+    .thanks-container__title {
+      margin-bottom: 2rem;
+      font-size: 3rem;
+      font-family: 'Yeseva One', cursive;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #fff; }
+    .thanks-container__text {
+      text-align: center;
+      font-size: 2rem;
+      line-height: 2.7rem;
+      color: #fff; }
+  .thanks_active {
+    display: flex; }
+
 *, *:after, *:before {
   box-sizing: border-box;
   outline: none; }

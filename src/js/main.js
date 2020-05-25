@@ -3,6 +3,8 @@ $(document).ready(function () {
   var hero = $('.hero').height();
   var modal = $(".modal");
   var modalContainer = $('.modal-container');
+  var thanks = $('.thanks');
+  var thanksContainer = $('.thanks-container');
   var containers = $('.header, .hero, .section, .footer');
   new WOW().init();
 
@@ -26,6 +28,7 @@ $(document).ready(function () {
   $('body').keydown(function(event){
     if (event.which == 27){
       modal.removeClass('modal_active');
+      thanks.removeClass('thanks_active');
       containers.css('filter', 'none');
     }
   });
@@ -35,6 +38,17 @@ $(document).ready(function () {
     containers.css('filter', 'none');
   });
 
+  $('.thanks-container__close').on("click", function(){
+    thanks.removeClass('thanks_active');
+    containers.css('filter', 'none');
+  });
+
+  thanks.mouseup(function(e){
+    e.preventDefault();
+    if(e.target == this && e.target != thanksContainer){
+      thanks.removeClass('thanks_active');
+    }
+  });
 
   $('.hero__scroll').on('click', function(){
     $('html, body').animate({'scrollTop': hero}, 500);
@@ -108,6 +122,19 @@ $(document).ready(function () {
         required: "Введите Ваш email",
         email: "Введите корректный email"
         },
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modal.removeClass('modal_active');
+          containers.css('filter', 'none');
+          thanks.addClass('thanks_active');
+        }
+      });
     }
   });
   $(".control__form").validate({
@@ -134,6 +161,17 @@ $(document).ready(function () {
         required: "Заполните поле",
         minlength: "Введите телефон полностью"
       },
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          thanks.addClass('thanks_active');
+        }
+      });
     }
   });
   $(".footer-container__form").validate({
@@ -164,7 +202,18 @@ $(document).ready(function () {
         minlength: "Введите телефон полностью"
       },
       userQuestion: "Заполните поле"
-      }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          thanks.addClass('thanks_active');
+        }
+      });
+    }
   });
   $('[type=tel]').mask('+7 (000) 000-00-00');
 
