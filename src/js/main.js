@@ -7,6 +7,7 @@ $(document).ready(function () {
   var thanksContainer = $('.thanks-container');
   var containers = $('.header, .hero, .section, .footer');
   new WOW().init();
+  var send = "<div class='sended'> <div class='sended__element'> Спасибо за отправленную заявку <div class='sended__element'>Вы также можете вступить в нашу группу в <a href='http://vk.com' class='sended__item'>ВКонтакте</a></div></div>";
 
   $('.contact__btn, .heroSend').on("click", function(e){
     e.preventDefault();
@@ -130,9 +131,7 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
-          modal.removeClass('modal_active');
-          containers.css('filter', 'none');
-          thanks.addClass('thanks_active');
+          $('.modal-container__form').replaceWith(send);
         }
       });
     }
@@ -169,7 +168,7 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
-          thanks.addClass('thanks_active');
+          $('.control__form').replaceWith(send);
         }
       });
     }
@@ -210,7 +209,7 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
-          thanks.addClass('thanks_active');
+          $('.footer-container__form').replaceWith(send);
         }
       });
     }

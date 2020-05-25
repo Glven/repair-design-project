@@ -292,7 +292,7 @@ input.invalid {
   min-height: 83px;
   background-color: #131313; }
   .header__logo {
-    margin-right: 10.9rem; }
+    margin-right: 10.5rem; }
   .header__nav {
     margin-right: 13.3rem; }
 
@@ -958,6 +958,22 @@ body {
       background: transparent; }
   .btn_big-size {
     font-size: 15px; }
+
+.sended {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2rem;
+  font-family: 'Yeseva One', cursive;
+  letter-spacing: 1.5px;
+  line-height: 2.7rem;
+  color: #e3b873; }
+  .sended__element {
+    text-align: center; }
+  .sended__item {
+    text-decoration: none;
+    color: #597da3; }
 
 @media (min-width: 1200px) and (max-width: 1399px) {
   html {
