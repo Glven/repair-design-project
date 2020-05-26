@@ -8,10 +8,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-  <link rel="preload" href="css/style.css" as="style">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/jqlight.lazyloadxt.js"></script>
-  <script src="js/jquery.lazyloadxt.js"></script>
 </head>
 <body>
   <header class="header">
@@ -195,7 +192,8 @@
         <!-- /.section-title__img -->
       </div>
       <!-- /.section-title -->
-      <div class="control__video wow bounceIn">
+      <div class="control__video wow bounceIn" id="player">
+        <script src="https://youtube.com/iframe_api"></script>
         <div class="control__video-play">
           <img data-src="img/play.svg" alt="play">
         </div>
@@ -625,13 +623,15 @@
   <a href="#hero" class="scroll-up">
     <i class="fa fa-arrow-up" aria-hidden="true"></i>
   </a>
+  <script src="js/jqlight.lazyloadxt.js"></script>
+  <script src="js/jquery.lazyloadxt.js"></script>
   <script src="https://use.fontawesome.com/fbf498e045.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=523235f1-3108-4620-aa19-4c04b9d26532&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=523235f1-3108-4620-aa19-4c04b9d26532&lang=ru_RU"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

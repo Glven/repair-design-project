@@ -7,9 +7,10 @@ $(document).ready(function () {
   var thanksContainer = $('.thanks-container');
   var containers = $('.header, .hero, .section, .footer');
   new WOW().init();
+  var player;
   var send = "<div class='sended'> <div class='sended__element'> Спасибо за отправленную заявку <div class='sended__element'>Вы также можете вступить в нашу группу в <a href='http://vk.com' class='sended__item'>ВКонтакте</a></div></div>";
 
-  $('img').lazyLoadXT();
+  // $('img').lazyLoadXT();
 
   $('.contact__btn, .heroSend').on("click", function(e){
     e.preventDefault();
@@ -254,5 +255,22 @@ $(document).ready(function () {
         .add(myPlacemark);
       myMap.behaviors
         .disable(['rightMouseButtonMagnifier', 'scrollZoom']);
+    }
+
+    
+    $('.control__video-play').on("click",
+      function onYouTubeIframeAPIReady(e) {
+        e.preventDefault();
+        player = new YT.Player('player', {
+          width: '100%',
+          videoId: '8awdQRP816c',
+          events: {
+            'onReady': videoPlay,
+          }
+        });
+      }
+    );
+    function videoPlay(e) {
+      e.target.playVideo();
     }
 });

@@ -494,6 +494,7 @@ input.invalid {
   .control__video {
     position: relative;
     max-width: 81.7rem;
+    width: 100%;
     height: 43.4rem;
     margin: auto;
     background: url("../img/video.png") no-repeat center/cover;
@@ -516,7 +517,8 @@ input.invalid {
       width: 8.5rem;
       height: 8.5rem;
       background-color: #e3b873;
-      border-radius: 50%; }
+      border-radius: 50%;
+      cursor: pointer; }
   .control__text {
     max-width: 57.1rem;
     margin: auto;
@@ -974,6 +976,9 @@ body {
   .sended__item {
     text-decoration: none;
     color: #597da3; }
+
+iframe {
+  display: block; }
 
 @media (min-width: 1200px) and (max-width: 1399px) {
   html {
