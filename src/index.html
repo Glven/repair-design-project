@@ -8,9 +8,10 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="preload" href="css/style.css" as="style">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=523235f1-3108-4620-aa19-4c04b9d26532&lang=ru_RU" type="text/javascript">
-  </script>
+  <script src="js/jqlight.lazyloadxt.js"></script>
+  <script src="js/jquery.lazyloadxt.js"></script>
 </head>
 <body>
   <header class="header">
@@ -159,17 +160,17 @@
               <div class="swiper-wrapper swiper-no-swiping">
                   <div class="swiper-slide">
                     <div class="project__slider-photo">
-                      <img src="img/project/project-1.jpg" alt="project">
+                      <img data-src="img/project/project-1.jpg" alt="project">
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <div class="project__slider-photo">
-                      <img src="img/project/project-2.png" alt="project">
+                      <img data-src="img/project/project-2.png" alt="project">
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <div class="project__slider-photo">
-                      <img src="img/project/project-1.jpg" alt="project">
+                      <img data-src="img/project/project-1.jpg" alt="project">
                     </div>
                   </div>
               </div>
@@ -190,13 +191,13 @@
       <div class="section-title">
         <h2 class="section-title__heading control__heading">онлайн контроль</h2>
         <!-- /.section-title__heading -->
-        <div class="section-title__img control__img"><img src="img/control.png" alt="control"></div>
+        <div class="section-title__img control__img"><img data-src="img/control.png" alt="control"></div>
         <!-- /.section-title__img -->
       </div>
       <!-- /.section-title -->
       <div class="control__video wow bounceIn">
         <div class="control__video-play">
-          <img src="img/play.svg" alt="play">
+          <img data-src="img/play.svg" alt="play">
         </div>
       </div>
       <div class="control__text">
@@ -227,7 +228,7 @@
         <h2 class="section-title__heading types__heading">Виды ремонта</h2>
         <!-- /.section-title__heading -->
         <div class="section-title__img types__img">
-          <img src="img/repair.svg" alt="types">
+          <img data-src="img/repair.svg" alt="types">
         </div>
         <!-- /.section-title__img -->
       </div>
@@ -235,7 +236,7 @@
       <div class="row">
         <div class="col-33">
           <div class="card types__card wow fadeInLeft" data-wow-delay="0.3s">
-            <img src="img/types/types-1.png" alt="types-1" class="card__photo">
+            <img data-src="img/types/types-1.png" alt="types-1" class="card__photo">
             <div class="card__text">
               <h3 class="card__title">Косметический ремонт</h3>
               <ul class="card__list">
@@ -253,7 +254,7 @@
         </div>
         <div class="col-33">
           <div class="card types__card wow fadeInUp" data-wow-delay="0.3s">
-            <img src="img/types/types-2.png" alt="types-2" class="card__photo">
+            <img data-src="img/types/types-2.png" alt="types-2" class="card__photo">
             <div class="card__text">
               <h3 class="card__title">Капитальный ремонт</h3>
               <ul class="card__list">
@@ -271,7 +272,7 @@
         </div>
         <div class="col-33">
           <div class="card types__card wow fadeInRight" data-wow-delay="0.3s">
-            <img src="img/types/types-3.png" alt="types-3" class="card__photo">
+            <img data-src="img/types/types-3.png" alt="types-3" class="card__photo">
             <div class="card__text">
               <h3 class="card__title">Дизайнерский ремонт</h3>
               <ul class="card__list">
@@ -301,7 +302,7 @@
         </h2>
         <!-- /.section-title__heading design__heading -->
         <div class="section-title__img design__img">
-          <img src="img/design.svg" alt="design">
+          <img data-src="img/design.svg" alt="design">
         </div>
         <!-- /.section-title__img -->
           <p class="section-title__text design__text section-title__text_center">
@@ -312,7 +313,7 @@
       <div class="row">
         <div class="col-33">
           <div class="card design__card wow fadeInUp" data-wow-delay="0.2s">
-            <img src="img/design/design-1.png" alt="design-1" class="card__photo">
+            <img data-src="img/design/design-1.png" alt="design-1" class="card__photo">
             <div class="card__text">
               <h3 class="card__title">Минимальный</h3>
               <ul class="card__list">
@@ -327,7 +328,7 @@
         </div>
         <div class="col-33">
           <div class="card design__card wow fadeInUp" data-wow-delay="0.5s">
-            <img src="img/design/design-2.png" alt="design-2" class="card__photo">
+            <img data-src="img/design/design-2.png" alt="design-2" class="card__photo">
             <div class="card__text">
               <h3 class="card__title">Стандартный</h3>
               <ul class="card__list">
@@ -345,7 +346,7 @@
         </div>
         <div class="col-33">
           <div class="card design__card wow fadeInUp" data-wow-delay="0.8s">
-            <img src="img/design/design-3.png" alt="design-3" class="card__photo">
+            <img data-src="img/design/design-3.png" alt="design-3" class="card__photo">
             <div class="card__text">
               <h3 class="card__title">Полный</h3>
               <ul class="card__list">
@@ -380,7 +381,7 @@
         </h2>
         <!-- /.section-title__heading team__heading -->
         <div class="section-title__img team__img">
-          <img src="img/team.svg" alt="team">
+          <img data-src="img/team.svg" alt="team">
         </div>
         <!-- /.section-title__img team__img -->
         <p class="section-title__text team__text section-title__text_center">Наша команда помогла стать счастливее более чем 500 семьям, и мы не собираемся останавливаться</p>
@@ -389,10 +390,10 @@
       <div class="team__wrap">
         <div class="row content-between">
           <div class="col-33">
-            <div class="team-card wow fadeInUp" data-wow-delay="0.2s">
-              <div class="team-card__icon"><img src="img/team/idea.svg" alt=""></div>
+            <div class="team-card">
+              <div class="team-card__icon"><img data-src="img/team/idea.svg" alt=""></div>
               <!-- /.team-card__icon -->
-              <div class="team-card__img"><img src="img/team/team-1.png" alt=""></div>
+              <div class="team-card__img"><img data-src="img/team/team-1.png" alt=""></div>
               <!-- /.team-card__img -->
               <div class="team-card__text">
                 <h3 class="team-card__title">Алексей Колмаков</h3>
@@ -404,10 +405,10 @@
           </div>
           <!-- /.col-33 -->
           <div class="col-33">
-            <div class="team-card wow fadeInUp" data-wow-delay="0.4s">
-              <div class="team-card__icon"><img src="img/team/pen.svg" alt=""></div>
+            <div class="team-card">
+              <div class="team-card__icon"><img data-src="img/team/pen.svg" alt=""></div>
               <!-- /.team-card__icon -->
-              <div class="team-card__img"><img src="img/team/team-2.png" alt=""></div>
+              <div class="team-card__img"><img data-src="img/team/team-2.png" alt=""></div>
               <!-- /.team-card__img -->
               <div class="team-card__text">
                 <h3 class="team-card__title">Алиса Сухорукова</h3>
@@ -419,10 +420,10 @@
           </div>
           <!-- /.col-33 -->
           <div class="col-33">
-            <div class="team-card wow fadeInUp" data-wow-delay="0.6s">
-              <div class="team-card__icon"><img src="img/team/portfolio.svg" alt=""></div>
+            <div class="team-card">
+              <div class="team-card__icon"><img data-src="img/team/portfolio.svg" alt=""></div>
               <!-- /.team-card__icon -->
-              <div class="team-card__img"><img src="img/team/team-3.png" alt=""></div>
+              <div class="team-card__img"><img data-src="img/team/team-3.png" alt=""></div>
               <!-- /.team-card__img -->
               <div class="team-card__text">
                 <h3 class="team-card__title">Давид Волынев</h3>
@@ -450,7 +451,7 @@
         <h2 class="section-title__heading clients__heading">наши клиенты</h2>
         <!-- /.section-title__heading clients__heading -->
         <div class="section-title__img clients__img">
-          <img src="img/clients.svg" alt="clients">
+          <img data-src="img/clients.svg" alt="clients">
         </div>
         <!-- /.section-title__img clietns__img -->
         <p class="section-title__text clients__text section-title__text_center">
@@ -462,7 +463,7 @@
       <div class="row">
         <div class="col-33">
           <div class="clients-card">
-            <div class="clients-card__head"><div class="clients-card__img"><img src="img/clients/clients-1.png" alt="clients"></div>
+            <div class="clients-card__head"><div class="clients-card__img"><img data-src="img/clients/clients-1.png" alt="clients"></div>
             <h3 class="clients-card__name">Савельева Екатерина Львовна</h3></div>
             <!-- /.clients-card__head -->
             <p class="clients-card__review">
@@ -480,7 +481,7 @@
         <!-- /.col-33 -->
         <div class="col-33">
           <div class="clients-card">
-            <div class="clients-card__head"><div class="clients-card__img"><img src="img/clients/clients-2.png" alt="clients"></div>
+            <div class="clients-card__head"><div class="clients-card__img"><img data-src="img/clients/clients-2.png" alt="clients"></div>
             <h3 class="clients-card__name">Большов Михаил Анатольевич</h3></div>
             <!-- /.clients-card__head -->
             <p class="clients-card__review">
@@ -498,7 +499,7 @@
         <!-- /.col-33 -->
         <div class="col-33">
           <div class="clients-card">
-            <div class="clients-card__head"><div class="clients-card__img"><img src="img/clients/clients-3.png" alt="clients"></div>
+            <div class="clients-card__head"><div class="clients-card__img"><img data-src="img/clients/clients-3.png" alt="clients"></div>
             <h3 class="clients-card__name">Хасанов Даниил Муратович</h3></div>
             <!-- /.clients-card__head -->
             <p class="clients-card__review">
@@ -585,7 +586,7 @@
 
   <div class="modal">
     <div class="modal-container">
-      <div class="modal__close"><img src="img/close.svg" alt="close"></div>
+      <div class="modal__close"><img data-src="img/close.svg" alt="close"></div>
       <!-- /.modal__close -->
       <h2 class="modal-container__title">Оставьте заявку и наш менеджер свяжется с вами</h2>
       <!-- /.modal-container__title -->
@@ -616,7 +617,7 @@
   <!-- /.modal -->
   <div class="thanks">
     <div class="thanks-container">
-      <div class="thanks-container__close"><img src="img/close.svg" alt="close"></div>
+      <div class="thanks-container__close"><img data-src="img/close.svg" alt="close"></div>
       <h2 class="thanks-container__title">Спасибо</h2>
       <p class="thanks-container__text">Приносим Вас свою благодарность за то, что Вы оставили заявку на нашем сайте. Наш оператор свяжется с вами в ближайшее время.</p>
     </div>
@@ -630,6 +631,7 @@
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=523235f1-3108-4620-aa19-4c04b9d26532&lang=ru_RU" type="text/javascript"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

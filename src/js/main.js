@@ -9,6 +9,8 @@ $(document).ready(function () {
   new WOW().init();
   var send = "<div class='sended'> <div class='sended__element'> Спасибо за отправленную заявку <div class='sended__element'>Вы также можете вступить в нашу группу в <a href='http://vk.com' class='sended__item'>ВКонтакте</a></div></div>";
 
+  $('img').lazyLoadXT();
+
   $('.contact__btn, .heroSend').on("click", function(e){
     e.preventDefault();
     modal.addClass('modal_active');
