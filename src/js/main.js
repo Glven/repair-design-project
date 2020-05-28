@@ -4,10 +4,21 @@ $(document).ready(function () {
   var modal = $(".modal");
   var modalContainer = $('.modal-container');
   var containers = $('.header, .hero, .section, .footer');
-  new WOW().init();
   var player;
   var headerHeight = $('.header').height();
   var send = "<div class='sended'> <div class='sended__element'> Спасибо за отправленную заявку <div class='sended__element'>Вы также можете вступить в нашу группу в <a href='http://vk.com' class='sended__item'>ВКонтакте</a></div></div>";
+
+
+  wow = new WOW(
+    {
+    boxClass:     'wow',      // default
+    animateClass: 'animated', // default
+    offset:       0,          // default
+    mobile:       false,       // default
+    live:         true        // default
+  }
+  )
+  wow.init();
 
 
   $('a[href^="#"]').on('click', function(e){
