@@ -3,14 +3,19 @@ $(document).ready(function () {
   var hero = $('.hero').height();
   var modal = $(".modal");
   var modalContainer = $('.modal-container');
-  var thanks = $('.thanks');
-  var thanksContainer = $('.thanks-container');
   var containers = $('.header, .hero, .section, .footer');
   new WOW().init();
   var player;
+  var headerHeight = $('.header').height();
   var send = "<div class='sended'> <div class='sended__element'> Спасибо за отправленную заявку <div class='sended__element'>Вы также можете вступить в нашу группу в <a href='http://vk.com' class='sended__item'>ВКонтакте</a></div></div>";
 
-  // $('img').lazyLoadXT();
+
+  $('a[href^="#"]').on('click', function(e){
+    e.preventDefault();
+    var id = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('html, body').animate({scrollTop: top - headerHeight * 1.5}, 600);
+  });
 
   $('.contact__btn, .heroSend').on("click", function(e){
     e.preventDefault();
@@ -32,7 +37,6 @@ $(document).ready(function () {
   $('body').keydown(function(event){
     if (event.which == 27){
       modal.removeClass('modal_active');
-      thanks.removeClass('thanks_active');
       containers.css('filter', 'none');
     }
   });
@@ -42,17 +46,6 @@ $(document).ready(function () {
     containers.css('filter', 'none');
   });
 
-  $('.thanks-container__close').on("click", function(){
-    thanks.removeClass('thanks_active');
-    containers.css('filter', 'none');
-  });
-
-  thanks.mouseup(function(e){
-    e.preventDefault();
-    if(e.target == this && e.target != thanksContainer){
-      thanks.removeClass('thanks_active');
-    }
-  });
 
   $('.hero__scroll').on('click', function(){
     $('html, body').animate({'scrollTop': hero}, 500);
@@ -92,6 +85,12 @@ $(document).ready(function () {
   
   next.css('left', prev.width() + 25 + bullets.width() + 25);
   bullets.css('left', prev.width() + 25);
+
+
+  $('.footer__map').on('click', function(e){
+    e.preventDefault();
+    $('.footer__map').removeClass('footer__map_blackout');
+  });
 
 
   $(".modal-container__form").validate({

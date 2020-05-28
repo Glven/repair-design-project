@@ -2,8 +2,20 @@
   position: relative
   background: $dark url('../img/footer-bg.png') no-repeat center / cover
   padding-top: 22rem
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    top: 0
+    display: block
+    width: 100%
+    height: 100%
+    background-color: rgba(#000, 0.6)
   &-container
     position: absolute
+    z-index: 3
     left: 50%
     top: -22rem
     transform: translateX(-50%)
@@ -44,6 +56,8 @@
     height: 5.1rem
     margin: auto
   &__contacts
+    position: relative
+    z-index: 3
     display: flex
     flex-direction: column
   &__description
@@ -70,7 +84,21 @@
     height: 46.5rem
     margin: auto
     margin-bottom: 8.5rem
+    &_blackout
+      &:after
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+        display: block
+        width: 100%
+        height: 100.2%
+        background-color: rgba(#000, 0.7)
   &__menu
+    position: relative
+    z-index: 3
     background-color: $dark
   &__wrap
     display: flex
